@@ -16,7 +16,7 @@ export default function Home() {
       {/* Fixed Background - Moon Landing */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/1.jpg"
+          src="/images/2.jpg"
           alt="Rocket Launch"
           fill
           priority
