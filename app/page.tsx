@@ -142,7 +142,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ScrollReveal delay={100}>
                 <div className="text-center p-6 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-slate-700/50">
-                  <div className="text-4xl font-bold text-sky-400 mb-2">50+</div>
+                  <div className="text-4xl font-bold text-sky-400 mb-2">30+</div>
                   <div className="text-slate-300">Applications</div>
                 </div>
               </ScrollReveal>
@@ -242,7 +242,7 @@ export default function Home() {
                   </li>
                   <li>
                     <Link href="#" className="hover:text-sky-400">
-                      View All
+                      
                     </Link>
                   </li>
                 </ul>

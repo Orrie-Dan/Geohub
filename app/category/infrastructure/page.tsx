@@ -21,7 +21,7 @@ const infrastructureApps = [
     image: "/images/infra1.jpg",
     description: "Helps in the visualization, analysis, and management of national infrastructure to support effective planning and development.",
     keywords: ["infrastructure", "mapping", "management", "visualization", "analysis", "planning", "development"],
-    url: "https://esrirw.rw/portal/apps/experiencebuilder/experience/?id=2a1d42711e78402cb90c398776f1cc9e"
+    url: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=ea6c3336fa594af7833ee3e422f225ef"
   },
   {
     id: 3,

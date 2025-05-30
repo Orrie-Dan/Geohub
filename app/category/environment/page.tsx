@@ -18,7 +18,7 @@ const environmentalApps = [
     image: "/images/protected-areas.jpg",
     description: "A comprehensive tool for monitoring and managing protected areas in Rwanda, integrating satellite imagery and field data",
     keywords: ["protected areas", "mapping", "monitoring", "satellite imagery", "field data", "Rwanda"],
-    launchUrl: "https://disa.minagri.gov.rw/portal/apps/dashboards/7aa34b3d5eaa4dc5b6a7940506be7563", // 
+    launchUrl: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=935a93ef47564c488f837e84b9777dd9", 
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const environmentalApps = [
     image: "/images/biodiversity.jpg",
     description: "A platform for mapping and monitoring biodiversity hotspots, tracking species distribution, and assessing ecosystem health",
     keywords: ["biodiversity", "mapping", "monitoring", "species distribution", "ecosystem health", "hotspots"],
-    launchUrl: "https://esri-rw.maps.arcgis.com/apps/dashboards/2a0246f878114976bc0b1cc05fac668f", // Add 
+    launchUrl: "https://gh.space.gov.rw/portal/apps/dashboards/aa5f474c713a48b8b35ebc116c7bbebb",  
   },
   {
     id: 3,

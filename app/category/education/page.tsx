@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useMemo, useCallback } from "react"
-import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, Star, Users, BookOpen, GraduationCap, Brain } from "lucide-react"
+import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, Star, Users, BookOpen, GraduationCap, Brain, Link } from "lucide-react"
+
 
 // Education application data
 const educationApps = [
@@ -12,7 +13,7 @@ const educationApps = [
     image: "/images/school.jpg",
     description: "Comprehensive digital learning platform aligned with Rwanda's national curriculum, featuring interactive lessons and progress tracking for primary and secondary students",
     keywords: ["k12", "curriculum", "primary", "secondary", "learning", "education", "rwanda"],
-    link: "https://gis.mineduc.gov.rw/apps/SchoolsMappingApplication/" 
+    link: "https://gh.space.gov.rw/portal/home/item.html?id=dbdfdfc8d9864a5da4669e1387754b95" 
   }
 ]
 
@@ -66,11 +67,13 @@ export default function EducationApps() {
           <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
           <div className="container relative z-10 px-4 mx-auto">
             <div className="flex items-center mb-8">
-              <button className="text-indigo-400 hover:text-indigo-300 mr-4 flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:bg-slate-700/50 transition-all">
-                <ArrowLeft className="h-4 w-4" />
-                Back to Home
-              </button>
-            </div>
+                <Link href="/">
+                  <button className="text-emerald-400 hover:text-emerald-300 mr-4">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Back to Home
+                  </button>
+                </Link>
+              </div>
             
             <div className="text-center mb-12 space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-purple-400 tracking-tight drop-shadow-lg">

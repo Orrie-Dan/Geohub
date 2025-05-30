@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from "react"
 import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, Heart, Activity, Users, Stethoscope } from "lucide-react"
+import Link from "next/link" 
 
 // Health application data
 const healthApps = [
@@ -12,7 +13,7 @@ const healthApps = [
     image: "/images/disease.jpg",
     description: "A comprehensive platform for reporting and mapping health facilities, hospitals, and clinics across Rwanda",
     keywords: ["disease", "outbreaks", "reporting", "mapping", "public health", "epidemiology"],
-    link: "https://gis.rbc.gov.rw/portal/apps/opsdashboard/index.html#/8df1fe8fb13343bf94f444999ad4d28c",
+    link: "https://gh.space.gov.rw/portal/apps/dashboards/becaf96569284409af237aedb4fa5785",
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ const healthApps = [
     image: "/images/health.jpg",
     description: "A tool for managing health emergencies and mapping disease outbreaks in real-time",
     keywords: ["health", "emergency", "management", "mapping", "disease outbreaks", "real-time"],
-    link: "https://esrirw.rw/portal/apps/experiencebuilder/experience/?id=a994304d8cca48a6a5ea4e4b8750ca63",
+    link: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=26f19f93207640eeada7363b577481de",
   },
   
 ]
@@ -73,10 +74,12 @@ export default function HealthApps() {
           <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"></div>
           <div className="container relative z-10 px-4 mx-auto">
             <div className="flex items-center mb-8">
+              <Link href="/">
               <button className="text-cyan-400 hover:text-cyan-300 mr-4 flex items-center">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Home
               </button>
+              </Link>
             </div>
             
             <div className="text-center mb-12">

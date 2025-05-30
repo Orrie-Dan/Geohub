@@ -14,7 +14,7 @@ const tourismApps = [
     image: "/images/mining.jpg",
     description: "A comprehensive tool for managing and visualizing mining licenses across Rwanda, integrating satellite imagery and GIS data.",
     keywords: ["mining", "licenses", "GIS", "satellite imagery"],
-    link: "https://gis.rmb.gov.rw/portal/apps/webappviewer/index.html?id=a6027577532e4ba886587836dcd6bb73",
+    link: "https://gh.space.gov.rw/portal/apps/dashboards/e0ff7e399bb04d4eb1053cae87c62468",
   },
   {
     id: 2,

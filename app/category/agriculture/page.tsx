@@ -45,7 +45,7 @@ const agriculturalApps = [
     image: "/images/cow.jpg",
     description: "A tool for mapping and analyzing the distribution of animal resources in Rwanda, integrating satellite imagery and GIS data",
     keywords: ["animal", "resources", "mapping", "distribution", "GIS", "Rwanda", "livestock"],
-    link: "https://esri-rw.maps.arcgis.com/apps/dashboards/719cf67c95714c7688bcce9e86ecfb5a"
+    link: "https://gh.space.gov.rw/portal/apps/dashboards/e03c654ba8134456a164fd78138055d2"
   }
 ]
 
