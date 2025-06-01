@@ -1,8 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Search, ChevronRight, MapPin } from "lucide-react"
+import { ChevronRight, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import CategorySection from "@/components/category-section"
 import HeroAnimation from "@/components/hero-animation"
 import FeaturedApp from "@/components/featured-app"
@@ -47,20 +46,8 @@ export default function Home() {
 
                 <p className="text-xl md:text-2xl text-white drop-shadow-md">Powered by the Rwanda Space Agency</p>
                 <p className="text-lg text-slate-200 max-w-2xl mx-auto drop-shadow-sm">
-                  Your central platform for geospatial applications and data across all sectors in Rwanda
+                  Your central platform for geospatial applications across all sectors in Rwanda
                 </p>
-
-                <div className="relative max-w-2xl mx-auto mt-8">
-                  <Input
-                    type="text"
-                    placeholder="Search for applications..."
-                    className="pl-12 py-6 text-lg bg-white/15 backdrop-blur-md border-slate-600 text-white placeholder:text-slate-300"
-                  />
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-300" />
-                  <Button className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-sky-600 hover:bg-sky-700">
-                    Search
-                  </Button>
-                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -79,8 +66,8 @@ export default function Home() {
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-white">About the GeoHub</h2>
                 <p className="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">
-                  GeoHub is Rwanda's premier platform for geospatial information and applications. Discover, analyze,
-                  and utilize spatial data to drive innovation and development across all sectors.
+                  GeoHub is Rwanda's premier platform for geospatial applications. Discover, analyze,
+                  and utilize spatial application to drive innovation and development across all sectors.
                 </p>
               </div>
             </ScrollReveal>
@@ -98,76 +85,44 @@ export default function Home() {
           <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm"></div>
           <div className="container relative z-10 px-4 mx-auto">
             <ScrollReveal>
-              <div className="flex justify-between items-center mb-12">
+              <div className="mb-12">
                 <h2 className="text-3xl font-bold text-white">Featured Applications</h2>
-                <Button variant="ghost" className="text-sky-400 hover:text-sky-300">
-                   <ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
               </div>
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ScrollReveal delay={100}>
                 <FeaturedApp
-                  title="Agriculture Land Mapping Application"
+                  title="Agriculture Land Profiling and Crops Suitability"
                   category="Agriculture"
-                  image="/images/agriculture.jpeg"
+                  image="/images/crops.jpg"
                   description="Map and analyze agricultural land use patterns across Rwanda"
+                  url="https://gh.space.gov.rw/portal/apps/dashboards/cbf25115208844b3ba46732a110e8ac1"
                 />
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <FeaturedApp
-                  title="Flood Risk Assessment"
+                  title="Floods Profile Mapping Application"
                   category="Disaster Management"
                   image="/images/flood-risk.jpeg"
                   description="Identify areas at risk of flooding based on topography and rainfall data"
+                  url="https://gh.space.gov.rw/portal/apps/dashboards/72dd1ef9653c436392633b8e32c364d8"
                 />
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <FeaturedApp
-                  title="Urban Planning Simulator"
-                  category="Infrastructure"
-                  image="/images/urban-planning.jpeg"
-                  description="Simulate urban development scenarios and their impact"
+                  title="Wildlife Conservation Mapping Application"
+                  category="conservation"
+                  image="/images/wildlife.jpg"
+                  description="Monitor and protect Rwanda's wildlife through spatial analysis"
+                  url="https://gh.space.gov.rw/portal/home/item.html?id=441bd8847a434397b8e945fe9a8d7852"
                 />
               </ScrollReveal>
             </div>
           </div>
         </section>
 
-        {/* Statistics Section */}
-        <section className="relative py-24">
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/90 backdrop-blur-sm"></div>
-          <div className="container relative z-10 px-4 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ScrollReveal delay={100}>
-                <div className="text-center p-6 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-slate-700/50">
-                  <div className="text-4xl font-bold text-sky-400 mb-2">30+</div>
-                  <div className="text-slate-300">Applications</div>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div className="text-center p-6 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-slate-700/50">
-                  <div className="text-4xl font-bold text-sky-400 mb-2">8</div>
-                  <div className="text-slate-300">Sectors Covered</div>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="text-center p-6 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-slate-700/50">
-                  <div className="text-4xl font-bold text-sky-400 mb-2">1000+</div>
-                  <div className="text-slate-300">Daily Users</div>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={400}>
-                <div className="text-center p-6 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-slate-700/50">
-                  <div className="text-4xl font-bold text-sky-400 mb-2">30+</div>
-                  <div className="text-slate-300">Data Partners</div>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
+        
         {/* Call to Action */}
         <section className="relative py-24">
           <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"></div>

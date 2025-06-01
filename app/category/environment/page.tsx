@@ -46,7 +46,7 @@ const environmentalApps = [
     image: "/images/wildlife.jpg",
     description: "A tool for tracking wildlife populations, migration patterns, and habitat changes using satellite imagery and field data",
     keywords: ["wildlife", "conservation", "mapping", "tracking", "habitat", "satellite imagery", "migration"],
-    launchUrl: "https://gis.rdb.rw/portal/apps/opsdashboard/index.html#/7d7bd55d3ce34133b62cadbc27a34876",
+    launchUrl: "https://gh.space.gov.rw/portal/home/item.html?id=441bd8847a434397b8e945fe9a8d7852",
   }
 ]
 
@@ -244,12 +244,23 @@ export default function EnvironmentalApps() {
                             {app.title}
                           </h3>
                           
-                          <p className="text-slate-300 text-sm mb-4 line-clamp-3">
-                            {app.description}
-                          </p>
+                          {/* Description with hover tooltip */}
+                          <div className="relative mb-4">
+                            <p className="text-slate-300 text-sm line-clamp-3 cursor-help">
+                              {app.description}
+                            </p>
+                            {/* Tooltip */}
+                            <div className="absolute bottom-full left-0 right-0 mb-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                              <div className="bg-slate-900/95 backdrop-blur-sm border border-slate-600 rounded-lg p-3 shadow-xl">
+                                <p className="text-slate-200 text-sm">
+                                  {app.description}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
 
-                          {/* Action Buttons */}
-                          <div className="flex gap-2">
+                          {/* Action Button */}
+                          <div className="flex">
                             <Button 
                               size="sm" 
                               className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white"
@@ -257,13 +268,6 @@ export default function EnvironmentalApps() {
                             >
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Launch
-                            </Button>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="border-slate-600 text-slate-300 hover:bg-slate-700"
-                            >
-                              Learn More
                             </Button>
                           </div>
                         </div>
@@ -293,9 +297,20 @@ export default function EnvironmentalApps() {
                               </div>
                             </div>
                             
-                            <p className="text-slate-300 text-sm mb-3">
-                              {app.description}
-                            </p>
+                            {/* Description with hover tooltip for list view */}
+                            <div className="relative mb-3">
+                              <p className="text-slate-300 text-sm cursor-help">
+                                {app.description}
+                              </p>
+                              {/* Tooltip for list view */}
+                              <div className="absolute bottom-full left-0 right-0 mb-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div className="bg-slate-900/95 backdrop-blur-sm border border-slate-600 rounded-lg p-3 shadow-xl">
+                                  <p className="text-slate-200 text-sm">
+                                    {app.description}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
 
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-4 text-sm text-slate-400">
@@ -304,7 +319,7 @@ export default function EnvironmentalApps() {
                                 </div>
                               </div>
                               
-                              <div className="flex gap-2">
+                              <div className="flex">
                                 <Button 
                                   size="sm" 
                                   className="bg-emerald-600 hover:bg-emerald-700 text-white"
@@ -312,13 +327,6 @@ export default function EnvironmentalApps() {
                                 >
                                   <ExternalLink className="mr-2 h-4 w-4" />
                                   Launch
-                                </Button>
-                                <Button 
-                                  size="sm" 
-                                  variant="outline" 
-                                  className="border-slate-600 text-slate-300 hover:bg-slate-700"
-                                >
-                                  Learn More
                                 </Button>
                               </div>
                             </div>

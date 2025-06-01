@@ -9,10 +9,10 @@ const infrastructureApps = [
     id: 1,
     title: "Rural settlement planning application",
     category: "Housing",
-    image: "/images/housing.jpg",
+    image: "/images/informal.jpg",
     description: "Aids in the sustainable design and organization of rural communities by mapping infrastructure, land use, and development needs.",
     keywords: ["housing", "planning", "rural", "infrastructure"],
-    url: "https://esri-rw.maps.arcgis.com/home/item.html?id=f0e5cfc695ae4c3d9ea98df95d3618a7"
+    url: "https://gh.space.gov.rw/portal/apps/dashboards/e7e0645fff854cc9960c4fb26605f0b2"
   },
   {
     id: 2,
@@ -35,11 +35,11 @@ const infrastructureApps = [
   {
     id: 4,
     title: "Informal Settlement Mapping and Monitoring Application",
-    category: "Urban Development",
-    image: "/images/urban.jpg",
+    category: "Housing",
+    image: "/images/rural.jpg",
     description: "Supports the mapping and monitoring of informal settlements to inform urban development strategies and improve living conditions.",
     keywords: ["informal", "settlement", "mapping", "monitoring", "urban", "development", "infrastructure"],
-    url: "https://esrirw.rw/portal/apps/dashboards/0d38738fbd2341358728259d0a83dfac"
+    url: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=1a6a39f10ca7437fb1cff673eed78e30"
   }
 ]
 
@@ -206,19 +206,19 @@ export default function InfrastructureApps() {
             {filteredApps.length > 0 ? (
               <div className={
                 viewMode === 'grid' 
-                  ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                  ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch"
                   : "space-y-4"
               }>
                 {filteredApps.map((app, index) => (
-                  <div key={app.id} className="animate-fadeIn" style={{animationDelay: `${index * 50}ms`}}>
+                  <div key={app.id} className="animate-fadeIn h-full" style={{animationDelay: `${index * 50}ms`}}>
                     {viewMode === 'grid' ? (
-                      // Grid View
+                      // Grid View - Equal Height Cards
                       <div 
-                        className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer h-full flex flex-col"
                         onClick={() => handleCardClick(app)}
                       >
                         {/* App Image */}
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-48 overflow-hidden flex-shrink-0">
                           <img
                             src={app.image}
                             alt={app.title}
@@ -237,23 +237,23 @@ export default function InfrastructureApps() {
                           </div>
                         </div>
 
-                        {/* App Content */}
-                        <div className="p-6">
+                        {/* App Content - Flexible height */}
+                        <div className="p-6 flex flex-col flex-grow">
                           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">
                             {app.title}
                           </h3>
                           
-                          <p className="text-slate-300 text-sm mb-4 line-clamp-3">
+                          <p className="text-slate-300 text-sm mb-4 flex-grow line-clamp-4">
                             {app.description}
                           </p>
 
-                          {/* Action Button */}
+                          {/* Action Button - Always at bottom */}
                           <button 
                             onClick={(e) => {
                               e.stopPropagation()
                               handleLaunchApp(app)
                             }}
-                            className="w-full bg-sky-600 hover:bg-sky-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                            className="w-full bg-sky-600 hover:bg-sky-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center mt-auto"
                           >
                             <ExternalLink className="mr-2 h-4 w-4" />
                             Launch Application
@@ -460,9 +460,9 @@ export default function InfrastructureApps() {
           opacity: 0;
         }
         
-        .line-clamp-3 {
+        .line-clamp-4 {
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           overflow: hidden;
         }

@@ -62,11 +62,19 @@ const categories = [
     image: "/images/library.jpeg",
   },
   {
-    title: "Land & Mining",
+    title: "Land ",
     icon: "map-pin",
-    description: "Land use planning, mining operations, and resource management",
+    description: "Land use planning and resource management",
     color: "amber",
-    applications: 2,
+    applications: 1,
+    image: "/images/land.jpg",
+  },
+  {
+    title: "Mining",
+    icon: "hammer",
+    description: "Mineral resource mapping and mining operations",
+    color: "gray",
+    applications: 1,
     image: "/images/mining.jpg",
   },
   {
@@ -87,13 +95,23 @@ const categories = [
     image: "/images/population.jpg",
   },
   {
-    title: "Finance & Trade",
+    title: "Finance ",
     icon: "dollar-sign",
-    description: "Market analysis, trade routes, and financial services mapping",
+    description: "Financial services mapping",
     color: "yellow",
-    applications: 2,
+    applications: 1,
+    image: "/images/finance.jpg",
+  },
+  {
+    title: "Trade",
+    icon: "dollar-sign",
+    description: "Market analysis and trade routes mapping",
+    color: "yellow",
+    applications: 1,
     image: "/images/trade.jpg",
+  
   }
+
 ]
 
 export default function CategorySection() {

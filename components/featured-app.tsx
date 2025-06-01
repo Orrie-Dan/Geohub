@@ -11,10 +11,15 @@ interface FeaturedAppProps {
   category: string
   image: string
   description: string
+  url: string;
 }
 
-export default function FeaturedApp({ title, category, image, description }: FeaturedAppProps) {
+export default function FeaturedApp({ title, category, image, description, url }: FeaturedAppProps) {
   const [isHovered, setIsHovered] = useState(false)
+
+  const handleLaunch = () => {
+    window.open(url, '_blank')
+  }
 
   return (
     <div
@@ -46,7 +51,7 @@ export default function FeaturedApp({ title, category, image, description }: Fea
           <Button variant="ghost" className="text-sky-400 hover:text-sky-300 p-0 h-auto">
             Learn more
           </Button>
-          <Button size="sm" className="bg-sky-600 hover:bg-sky-700">
+          <Button size="sm" className="bg-sky-600 hover:bg-sky-700" onClick={handleLaunch}>
             <ExternalLink className="h-4 w-4 mr-2" /> Launch
           </Button>
         </div>

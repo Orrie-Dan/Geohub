@@ -15,16 +15,8 @@ const tourismApps = [
     description: "A comprehensive tool for managing and visualizing mining licenses across Rwanda, integrating satellite imagery and GIS data.",
     keywords: ["mining", "licenses", "GIS", "satellite imagery"],
     link: "https://gh.space.gov.rw/portal/apps/dashboards/e0ff7e399bb04d4eb1053cae87c62468",
-  },
-  {
-    id: 2,
-    title: "Parcels Surveying and Mapping Application",
-    category: "Land Management",
-    image: "/images/land.jpg",
-    description: "An advanced surveying and mapping application for land parcels, utilizing high-resolution satellite imagery and GIS technology.",
-    keywords: ["land", "surveying", "mapping", "GIS"],
-    link: "https://esrirw.rw/portal/apps/dashboards/9adc66199226432699552b4ee0346a72",
   }
+  
 ]
 
 export default function TourismApps() {
@@ -232,9 +224,7 @@ export default function TourismApps() {
                               <ExternalLink className="h-4 w-4" />
                               Launch
                             </button>
-                            <button className="px-3 py-2 border border-slate-600 text-slate-300 hover:bg-slate-700 text-sm rounded-lg transition-colors">
-                              Learn More
-                            </button>
+                            
                           </div>
                         </div>
                       </div>

@@ -21,6 +21,13 @@ export default function EducationApps() {
   const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState('grid') // 'grid' or 'list'
 
+  // Handle back to home navigation
+  const handleBackToHome = useCallback(() => {
+    // For demo purposes, this could navigate back or go to a home page
+    // In a real app, you might use router.back() or navigate to '/'
+    window.history.back()
+  }, [])
+
   // Handle opening external links
   const handleOpenLink = useCallback((url: string) => {
     if (url) { 
@@ -67,13 +74,14 @@ export default function EducationApps() {
           <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
           <div className="container relative z-10 px-4 mx-auto">
             <div className="flex items-center mb-8">
-                <Link href="/">
-                  <button className="text-emerald-400 hover:text-emerald-300 mr-4">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back to Home
-                  </button>
-                </Link>
-              </div>
+              <button 
+                onClick={handleBackToHome}
+                className="flex items-center text-emerald-400 hover:text-emerald-300 transition-colors duration-200 group"
+              >
+                <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform duration-200" />
+                Back to Home
+              </button>
+            </div>
             
             <div className="text-center mb-12 space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-purple-400 tracking-tight drop-shadow-lg">
@@ -272,12 +280,7 @@ export default function EducationApps() {
                                   <ExternalLink className="h-4 w-4" />
                                   Launch
                                 </button>
-                                <button 
-                                  className="px-3 py-2 border border-slate-600 text-slate-300 hover:bg-slate-700 text-sm rounded-lg transition-colors"
-                                  onClick={() => handleOpenLink(app.link)}
-                                >
-                                  Learn More
-                                </button>
+                                
                               </div>
                             </div>
                           </div>
@@ -326,9 +329,12 @@ export default function EducationApps() {
                 <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
+                    <button 
+                      onClick={handleBackToHome}
+                      className="hover:text-indigo-400 transition-colors text-left"
+                    >
                       Home
-                    </a>
+                    </button>
                   </li>
                   <li>
                     <a href="#" className="hover:text-indigo-400 transition-colors">
@@ -394,7 +400,7 @@ export default function EducationApps() {
                   <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors">
                     <span className="sr-only">LinkedIn</span>
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5 5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
                 </div>

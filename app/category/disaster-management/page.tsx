@@ -32,7 +32,7 @@ const disasterApps = [
     image: "/images/flood.jpg",
     description: "Satellite-based flood risk mapping and vulnerability assessment tool for disaster management",
     keywords: ["flood", "mapping", "risk", "satellite", "topography", "vulnerability"],
-    Link: "https://esri-rw.maps.arcgis.com/apps/dashboards/53c36e83f90c4df3981c6cf056dcf611"
+    Link: "https://gh.space.gov.rw/portal/apps/dashboards/72dd1ef9653c436392633b8e32c364d8"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const disasterApps = [
     image: "/images/earthquake.jpg",
     description: "Platform for earthquake evacuation route planning, shelter identification, and emergency response optimization",
     keywords: ["earthquakes", "evacuation", "shelter", "planning", "crisis", "management", "response"],
-    Link: "https://esri-rw.maps.arcgis.com/apps/dashboards/70662a2a9c5b4998bd8d185247e57517"
+    Link: "https://gh.space.gov.rw/portal/apps/dashboards/f8db3d8708cc4e2b889554f25c40e2cc"
   },
   {
     id: 5,
@@ -272,9 +272,7 @@ export default function DisasterManagement() {
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Launch
                             </button>
-                            <button className="px-4 py-2 border border-slate-600 text-slate-300 hover:bg-slate-700 rounded-lg transition-colors text-sm">
-                              Learn More
-                            </button>
+                            
                           </div>
                         </div>
                       </div>

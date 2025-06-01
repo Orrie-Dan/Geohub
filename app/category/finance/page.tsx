@@ -3,98 +3,47 @@
 import { useState, useMemo, useCallback } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin } from "lucide-react"
+import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, TrendingUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { ScrollProgress } from "@/components/scroll-progress"
 
-// Agricultural application data
-const agriculturalApps = [
+// Finance & Trade application data
+const financeTradeApps = [
+  
   {
     id: 1,
-    title: "Agriculture Land Mapping Application",
-    category: "agriculture",
-    image: "/images/agriculture.jpeg",
-    description: "A comprehensive tool for mapping and analyzing agricultural land use patterns in Rwanda, integrating satellite imagery and GIS data",
-    keywords: ["agriculture", "mapping", "land use", "GIS", "Rwanda", "farming", "sustainability"],
-    link: "https://disa.minagri.gov.rw/portal/apps/experiencebuilder/experience/?id=b6d12156a85543fba92220a0393a6c1e"
+    title: "Property Tax Mapping Application",
+    category: "Finance ",
+    image: "/images/finance.jpg",
+    description: "A comprehensive mapping application for property tax management in Rwanda.",
+    keywords: ["property tax", "mapping", "Rwanda", "urban planning", "tax collection"],
+    link: "https://gh.space.gov.rw/portal/home/item.html?id=7978f28223b5468aafc732aa64750bd5"
   },
-  {
-    id: 2,
-    title: "Soil Information Mapping Application",
-    category: "Soil Management",
-    image: "/images/soil.jpg", 
-    description: "Monitor soil conditions including pH, moisture, nutrients, and organic matter content across your farmland",
-    keywords: ["soil", "health", "pH", "moisture", "nutrients", "monitoring", "farmland"],
-    link: "https://gh.space.gov.rw/portal/apps/dashboards/f3f886a80baf4b649dd3bbff0db6cf83"
-  },
-  {
-    id: 3,
-    title: "Agriculture Land Profiling and Crops Suitability",
-    category: "Crop Management",
-    image: "/images/crops.jpg",
-    description: "Detect and diagnose crop diseases providing farmers with actionable insights to protect their crops",
-    keywords: ["crop", "disease", "detection", "diagnosis", "AI", "image recognition", "agriculture"],
-    link: "https://gh.space.gov.rw/portal/apps/dashboards/cbf25115208844b3ba46732a110e8ac1"
-  },
-  {
-    id: 4,
-    title: "Animal Resources Distribution Mapping Application",
-    category: "Animal Resources",
-    image: "/images/cow.jpg",
-    description: "A tool for mapping and analyzing the distribution of animal resources in Rwanda, integrating satellite imagery and GIS data",
-    keywords: ["animal", "resources", "mapping", "distribution", "GIS", "Rwanda", "livestock"],
-    link: "https://gh.space.gov.rw/portal/apps/dashboards/e03c654ba8134456a164fd78138055d2"
-  }
 ]
 
-export default function AgriculturalApps() {
+export default function FinanceTradeApps() {
   const [searchQuery, setSearchQuery] = useState('')
   const [viewMode, setViewMode] = useState('grid') // 'grid' or 'list'
 
-  // Enhanced function to handle launching applications with better error handling
-  const handleLaunchApp = useCallback((url: string, appTitle: string) => {
-    try {
-      // Ensure URL is valid
-      if (!url || url.trim() === '') {
-        alert(`Sorry, the link for "${appTitle}" is not available yet.`)
-        return
-      }
-      
-      // Open in new tab with security features
-      const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-      
-      // Check if popup was blocked
-      if (!newWindow) {
-        alert('Popup blocked. Please allow popups for this site and try again.')
-      }
-    } catch (error) {
-      console.error('Error opening application:', error)
-      alert(`Error opening "${appTitle}". Please try again.`)
-    }
+  // Function to handle launching applications
+  const handleLaunchApp = useCallback((url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer')
   }, [])
-
-  // Function to handle "Learn More" - could navigate to detail page or show modal
-  const handleLearnMore = useCallback((app: typeof agriculturalApps[number]) => {
-    // For now, just launch the app. You can modify this to show a detailed modal or navigate to a detail page
-    handleLaunchApp(app.link, app.title)
-  }, [handleLaunchApp])
 
   // Simplified search function - only searches titles/names
   const searchApps = useCallback((query: string) => {
-    if (!query.trim()) return agriculturalApps
+    if (!query.trim()) return financeTradeApps
 
     const searchTerm = query.toLowerCase()
     
-    return agriculturalApps.filter(app => 
-      app.title.toLowerCase().includes(searchTerm) ||
-      app.description.toLowerCase().includes(searchTerm) ||
-      app.category.toLowerCase().includes(searchTerm)
+    return financeTradeApps.filter(app => 
+      app.title.toLowerCase().includes(searchTerm)
     )
   }, [])
 
-  // Memoized filtered applications with enhanced search
+  // Memoized filtered applications with title-only search
   const filteredApps = useMemo(() => {
     return searchApps(searchQuery)
   }, [searchQuery, searchApps])
@@ -135,7 +84,7 @@ export default function AgriculturalApps() {
             <ScrollReveal>
               <div className="flex items-center mb-8">
                 <Link href="/">
-                  <Button variant="ghost" className="text-sky-400 hover:text-sky-300 mr-4">
+                  <Button variant="ghost" className="text-emerald-400 hover:text-emerald-300 mr-4">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Back to Home
                   </Button>
@@ -143,12 +92,15 @@ export default function AgriculturalApps() {
               </div>
               
               <div className="text-center mb-12">
-                <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-400 tracking-tight drop-shadow-lg mb-4">
-                  Agricultural Applications
-                </h1>
+                <div className="flex items-center justify-center mb-4">
+                  <TrendingUp className="h-12 w-12 text-emerald-400 mr-4" />
+                  <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-emerald-400 tracking-tight drop-shadow-lg">
+                    Finance Applications
+                  </h1>
+                </div>
                 <p className="text-xl text-slate-200 max-w-3xl mx-auto drop-shadow-sm">
-                  Discover cutting-edge agricultural technology solutions to optimize farming operations, 
-                  increase productivity, and promote sustainable agriculture in Rwanda
+                  Access powerful financial analytics and trade intelligence tools to monitor economic indicators, 
+                  track market trends, and support strategic business decisions in Rwanda's growing economy
                 </p>
               </div>
 
@@ -158,10 +110,10 @@ export default function AgriculturalApps() {
                   <div className="relative flex-1">
                     <Input
                       type="text"
-                      placeholder="Search applications by name, category, or description..."
+                      placeholder="Search applications by name..."
                       value={searchQuery}
                       onChange={handleSearchChange}
-                      className="pl-12 pr-10 py-4 text-lg bg-white/15 backdrop-blur-md border-slate-600 text-white placeholder:text-slate-300 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/50"
+                      className="pl-12 pr-10 py-4 text-lg bg-white/15 backdrop-blur-md border-slate-600 text-white placeholder:text-slate-300 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/50"
                     />
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-300 h-5 w-5" />
                     {searchQuery && (
@@ -182,7 +134,7 @@ export default function AgriculturalApps() {
                       variant={viewMode === 'grid' ? 'default' : 'outline'}
                       onClick={() => setViewMode('grid')}
                       className={viewMode === 'grid' 
-                        ? "bg-sky-600 hover:bg-sky-700 text-white" 
+                        ? "bg-emerald-600 hover:bg-emerald-700 text-white" 
                         : "border-slate-600 text-slate-300 hover:bg-slate-800"
                       }
                     >
@@ -194,7 +146,7 @@ export default function AgriculturalApps() {
                       variant={viewMode === 'list' ? 'default' : 'outline'}
                       onClick={() => setViewMode('list')}
                       className={viewMode === 'list' 
-                        ? "bg-sky-600 hover:bg-sky-700 text-white" 
+                        ? "bg-emerald-600 hover:bg-emerald-700 text-white" 
                         : "border-slate-600 text-slate-400 hover:bg-slate-800"
                       }
                     >
@@ -210,12 +162,12 @@ export default function AgriculturalApps() {
                 <p>
                   {searchQuery ? (
                     <>
-                      Found <span className="text-sky-400 font-semibold">{filteredApps.length}</span> applications
+                      Found <span className="text-emerald-400 font-semibold">{filteredApps.length}</span> applications
                       <span className="text-slate-400"> matching "{searchQuery}"</span>
                     </>
                   ) : (
                     <>
-                      Showing <span className="text-sky-400 font-semibold">{filteredApps.length}</span> agricultural applications
+                      Showing <span className="text-emerald-400 font-semibold">{filteredApps.length}</span> finance & trade application
                     </>
                   )}
                 </p>
@@ -251,7 +203,7 @@ export default function AgriculturalApps() {
                           
                           {/* Category Badge */}
                           <div className="absolute top-3 right-3">
-                            <span className="px-2 py-1 text-xs font-medium bg-sky-500/20 text-sky-400 border border-sky-500/30 rounded-full">
+                            <span className="px-2 py-1 text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full">
                               {app.category}
                             </span>
                           </div>
@@ -259,7 +211,7 @@ export default function AgriculturalApps() {
 
                         {/* App Content */}
                         <div className="p-6">
-                          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">
+                          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
                             {app.title}
                           </h3>
                           
@@ -271,20 +223,13 @@ export default function AgriculturalApps() {
                           <div className="flex gap-2">
                             <Button 
                               size="sm" 
-                              className="flex-1 bg-sky-600 hover:bg-sky-700 text-white cursor-pointer"
-                              onClick={() => handleLaunchApp(app.link, app.title)}
+                              className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white"
+                              onClick={() => handleLaunchApp(app.link)}
                             >
                               <ExternalLink className="mr-2 h-4 w-4" />
-                              Launch App
+                              Launch
                             </Button>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="border-slate-600 text-slate-300 hover:bg-slate-700 cursor-pointer"
-                              onClick={() => handleLearnMore(app)}
-                            >
-                              Learn More
-                            </Button>
+                            
                           </div>
                         </div>
                       </div>
@@ -303,11 +248,11 @@ export default function AgriculturalApps() {
                           
                           <div className="flex-1">
                             <div className="flex items-start justify-between mb-2">
-                              <h3 className="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
+                              <h3 className="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors">
                                 {app.title}
                               </h3>
                               <div className="flex gap-2">
-                                <span className="px-2 py-1 text-xs font-medium bg-sky-500/20 text-sky-400 border border-sky-500/30 rounded-full">
+                                <span className="px-2 py-1 text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full">
                                   {app.category}
                                 </span>
                               </div>
@@ -320,21 +265,27 @@ export default function AgriculturalApps() {
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-4 text-sm text-slate-400">
                                 <div className="flex items-center">
-                                  <span className="text-yellow-400 mr-1">★</span>
-                                  <span>Agricultural Tool</span>
+                                  <TrendingUp className="h-4 w-4 text-emerald-400 mr-1" />
+                                  <span>Live Data</span>
                                 </div>
                               </div>
                               
                               <div className="flex gap-2">
                                 <Button 
                                   size="sm" 
-                                  className="bg-sky-600 hover:bg-sky-700 text-white cursor-pointer"
-                                  onClick={() => handleLaunchApp(app.link, app.title)}
+                                  className="bg-emerald-600 hover:bg-emerald-700 text-white"
+                                  onClick={() => handleLaunchApp(app.link)}
                                 >
                                   <ExternalLink className="mr-2 h-4 w-4" />
-                                  Launch App
+                                  Launch
                                 </Button>
-                                
+                                <Button 
+                                  size="sm" 
+                                  variant="outline" 
+                                  className="border-slate-600 text-slate-300 hover:bg-slate-700"
+                                >
+                                  Learn More
+                                </Button>
                               </div>
                             </div>
                           </div>
@@ -357,7 +308,7 @@ export default function AgriculturalApps() {
                     <p className="text-sm text-slate-500">Try different keywords or:</p>
                     <Button 
                       onClick={clearSearch}
-                      className="bg-sky-600 hover:bg-sky-700 text-white"
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white"
                       size="sm"
                     >
                       Show all applications
@@ -384,22 +335,22 @@ export default function AgriculturalApps() {
                 <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
                       About
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
                       Applications
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
                       Contact
                     </Link>
                   </li>
@@ -409,22 +360,22 @@ export default function AgriculturalApps() {
                 <h3 className="text-white text-lg font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
+                      Finance & Trade
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-emerald-400">
                       Agriculture
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
                       Infrastructure
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
-                      Health
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#" className="hover:text-emerald-400">
                       View All
                     </Link>
                   </li>
@@ -437,19 +388,19 @@ export default function AgriculturalApps() {
                     <MapPin className="h-4 w-4 mr-2" /> Kigali, Rwanda
                   </li>
                   <li>
-                    <Link href="mailto:info@space.gov.rw" className="hover:text-sky-400">
+                    <Link href="mailto:info@space.gov.rw" className="hover:text-emerald-400">
                       info@space.gov.rw
                     </Link>
                   </li>
                 </ul>
                 <div className="mt-4 flex space-x-4">
-                  <Link href="#" className="text-slate-400 hover:text-sky-400">
+                  <Link href="#" className="text-slate-400 hover:text-emerald-400">
                     <span className="sr-only">Twitter</span>
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                     </svg>
                   </Link>
-                  <Link href="#" className="text-slate-400 hover:text-sky-400">
+                  <Link href="#" className="text-slate-400 hover:text-emerald-400">
                     <span className="sr-only">LinkedIn</span>
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />

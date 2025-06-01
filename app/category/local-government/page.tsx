@@ -227,14 +227,7 @@ export default function LocalGovernmentPage() {
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Access Service
                             </Button>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="border-slate-600 text-slate-300 hover:bg-slate-700"
-                              onClick={() => handleOpenLink(service.link)}
-                            >
-                              Learn More
-                            </Button>
+                            
                           </div>
                         </div>
                       </div>

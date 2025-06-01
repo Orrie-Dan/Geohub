@@ -176,10 +176,10 @@ export default function HealthApps() {
                 {filteredApps.map((app) => (
                   <div key={app.id}>
                     {viewMode === 'grid' ? (
-                      // Grid View
-                      <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                      // Grid View - Added h-full and flex flex-col for equal height
+                      <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col">
                         {/* App Image */}
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-48 overflow-hidden flex-shrink-0">
                           {imageErrors.has(app.id) ? (
                             // Fallback when image fails to load
                             <div className="w-full h-full bg-gradient-to-br from-cyan-600/20 to-blue-600/20 flex items-center justify-center">
@@ -203,18 +203,18 @@ export default function HealthApps() {
                           </div>
                         </div>
 
-                        {/* App Content */}
-                        <div className="p-6">
+                        {/* App Content - Added flex-1 to take remaining space */}
+                        <div className="p-6 flex flex-col flex-1">
                           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                             {app.title}
                           </h3>
                           
-                          <p className="text-slate-300 text-sm mb-4 line-clamp-3">
+                          <p className="text-slate-300 text-sm mb-4 line-clamp-3 flex-1">
                             {app.description}
                           </p>
                           
-                          {/* Action Buttons */}
-                          <div className="flex gap-2">
+                          {/* Action Buttons - Added mt-auto to push to bottom */}
+                          <div className="flex gap-2 mt-auto">
                             <a 
                               href={app.link}
                               target="_blank"
@@ -224,9 +224,7 @@ export default function HealthApps() {
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Launch
                             </a>
-                            <button className="border border-slate-600 text-slate-300 hover:bg-slate-700 px-3 py-2 rounded-lg text-sm transition-colors">
-                              Learn More
-                            </button>
+                            
                           </div>
                         </div>
                       </div>

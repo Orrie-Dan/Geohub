@@ -16,19 +16,11 @@ const financeTradeApps = [
     title: "Trade Centers and Markets Mapping and Profiling Application (V1)",
     category: " Trade",
     image: "/images/trade.jpg",
-    description: "An interactive mapping and profiling application for trade centers and markets in Rwanda, providing insights into location, facilities, and services to enhance trade operations and business intelligence",
+    description: "An interactive application for mapping and profiling trade centers and markets in Rwanda.",
     keywords: ["trade centers", "markets", "mapping", "profiling", "Rwanda", "business intelligence"],
     link: "https://esrirw.rw/portal/apps/dashboards/acac2c514da14351853dd5804c8d7c31"
-  },
-  {
-    id: 2,
-    title: "Property Tax Mapping Application",
-    category: "Finance ",
-    image: "/images/finance.jpg",
-    description: "A comprehensive mapping application for property tax management in Rwanda, enabling efficient tracking, valuation, and assessment of properties to optimize tax collection and urban planning",
-    keywords: ["property tax", "mapping", "Rwanda", "urban planning", "tax collection"],
-    link: "https://gh.space.gov.rw/portal/home/item.html?id=7978f28223b5468aafc732aa64750bd5"
-  },
+  }
+  
 ]
 
 export default function FinanceTradeApps() {
@@ -103,12 +95,12 @@ export default function FinanceTradeApps() {
                 <div className="flex items-center justify-center mb-4">
                   <TrendingUp className="h-12 w-12 text-emerald-400 mr-4" />
                   <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-emerald-400 tracking-tight drop-shadow-lg">
-                    Finance & Trade Applications
+                    Trade Applications
                   </h1>
                 </div>
                 <p className="text-xl text-slate-200 max-w-3xl mx-auto drop-shadow-sm">
-                  Access powerful financial analytics and trade intelligence tools to monitor economic indicators, 
-                  track market trends, and support strategic business decisions in Rwanda's growing economy
+                  Explore our collection of geospatial applications designed to enhance trade in Rwanda.
+                  These tools provide valuable insights and data to support business growth and economic development.
                 </p>
               </div>
 
@@ -175,7 +167,7 @@ export default function FinanceTradeApps() {
                     </>
                   ) : (
                     <>
-                      Showing <span className="text-emerald-400 font-semibold">{filteredApps.length}</span> finance & trade application
+                      Showing <span className="text-emerald-400 font-semibold">{filteredApps.length}</span>  trade application
                     </>
                   )}
                 </p>
@@ -237,13 +229,7 @@ export default function FinanceTradeApps() {
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Launch
                             </Button>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="border-slate-600 text-slate-300 hover:bg-slate-700"
-                            >
-                              Learn More
-                            </Button>
+                            
                           </div>
                         </div>
                       </div>
