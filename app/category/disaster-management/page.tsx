@@ -14,7 +14,7 @@ const disasterApps = [
     image: "/images/landslide.jpg",
     description: "Real-time monitoring and alert system for landslides in Rwanda, providing early warnings and risk assessments",
     keywords: ["landslides", "monitoring", "alerts", "real-time", "risk assessment", "early warning"],
-    Link: "https://ewis.minema.gov.rw/portal/apps/dashboards/3cd4478fe95341dd82f9224a5f09e76e"
+    Link: "https://gh.space.gov.rw/portal/home/item.html?id=89f13f64a695414bbe6be1f48570f4bb"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const disasterApps = [
     image: "/images/storm.jpg",
     description: "Comprehensive storm response coordination platform for emergency teams, resources, and communication",
     keywords: ["storms", "emergency", "response", "coordination", "platform", "communication"],
-    Link: "https://esrirw-my.sharepoint.com/:w:/p/jons/EcVa_uNIdydPi4M0FjJZUyEBW_o9Oct3jPFrVxSKOF8mbg?e=GPOdv3"
+    Link: "https://gh.space.gov.rw/portal/apps/dashboards/e89c802794114d7d97e4731351de612c"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const disasterApps = [
     image: "/images/flood.jpg",
     description: "Satellite-based flood risk mapping and vulnerability assessment tool for disaster management",
     keywords: ["flood", "mapping", "risk", "satellite", "topography", "vulnerability"],
-    Link: "https://gh.space.gov.rw/portal/apps/dashboards/72dd1ef9653c436392633b8e32c364d8"
+    Link: "https://gh.space.gov.rw/portal/apps/dashboards/902b4a62d0f4420ab66be44e5ad8d40c"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const disasterApps = [
     image: "/images/earthquake.jpg",
     description: "Platform for earthquake evacuation route planning, shelter identification, and emergency response optimization",
     keywords: ["earthquakes", "evacuation", "shelter", "planning", "crisis", "management", "response"],
-    Link: "https://gh.space.gov.rw/portal/apps/dashboards/f8db3d8708cc4e2b889554f25c40e2cc"
+    Link: "https://gh.space.gov.rw/portal/apps/dashboards/cd5411087b9b46b4ac356ae29fe6f3bf"
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const disasterApps = [
     image: "/images/reporting.jpg",
     description: "Community-based emergency reporting application for citizens to report incidents, hazards, and emergencies",
     keywords: ["citizens", "emergency", "reporting", "application", "community", "hazards", "incidents"],
-    Link: "https://esrirw.rw/portal/apps/dashboards/3c38a17377bb4009950a3817bf20988d"
+    Link: "https://gh.space.gov.rw/portal/apps/dashboards/54565775943645309ffdd5aee7b76f60"
   }
   
 ]

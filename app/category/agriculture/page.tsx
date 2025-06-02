@@ -18,7 +18,7 @@ const agriculturalApps = [
     image: "/images/agriculture.jpeg",
     description: "A comprehensive tool for mapping and analyzing agricultural land use patterns in Rwanda, integrating satellite imagery and GIS data",
     keywords: ["agriculture", "mapping", "land use", "GIS", "Rwanda", "farming", "sustainability"],
-    link: "https://disa.minagri.gov.rw/portal/apps/experiencebuilder/experience/?id=b6d12156a85543fba92220a0393a6c1e"
+    link: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=6efa04bfc78648729ff1c6332ea08a07"
   },
   {
     id: 2,
@@ -277,14 +277,7 @@ export default function AgriculturalApps() {
                               <ExternalLink className="mr-2 h-4 w-4" />
                               Launch App
                             </Button>
-                            <Button 
-                              size="sm" 
-                              variant="outline" 
-                              className="border-slate-600 text-slate-300 hover:bg-slate-700 cursor-pointer"
-                              onClick={() => handleLearnMore(app)}
-                            >
-                              Learn More
-                            </Button>
+                            
                           </div>
                         </div>
                       </div>

@@ -17,7 +17,7 @@ const governmentServices = [
     category: " Emergency Management",
     image: "/images/room.jpg",
     description: "A digital platform for managing emergency situations at the district level, providing real-time data and coordination tools.",
-    link: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=c0161969a1694bd98987b200627800e4",
+    link: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=2563c3a878ea4771bb48d6da1e936fbe&page=Home",
     keywords: ["emergency", "management", "district", "coordination"],
   }
   

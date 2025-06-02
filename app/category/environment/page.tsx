@@ -37,7 +37,7 @@ const environmentalApps = [
     description: "Real-time air quality monitoring and pollution source identification across urban and rural areas",
     features: ["Real-time Monitoring", "Pollution Mapping", "Health Index", "Source Identification"],
     keywords: ["air", "quality", "pollution", "monitoring", "health", "urban", "emissions"],
-    launchUrl: "https://esri-rw.maps.arcgis.com/apps/dashboards/2dbb621a4f8b466a8d93079848dc31b8", 
+    launchUrl: "https://gh.space.gov.rw/portal/apps/experiencebuilder/experience/?id=9106a95a8cc34866b24940c607015d28", 
   },
   {
     id: 4,

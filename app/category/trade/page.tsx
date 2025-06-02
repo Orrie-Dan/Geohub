@@ -18,7 +18,7 @@ const financeTradeApps = [
     image: "/images/trade.jpg",
     description: "An interactive application for mapping and profiling trade centers and markets in Rwanda.",
     keywords: ["trade centers", "markets", "mapping", "profiling", "Rwanda", "business intelligence"],
-    link: "https://esrirw.rw/portal/apps/dashboards/acac2c514da14351853dd5804c8d7c31"
+    link: "https://gh.space.gov.rw/portal/apps/dashboards/63ad3a5d137945c999bfc919aeeb79b0"
   }
   
 ]

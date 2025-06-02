@@ -30,7 +30,7 @@ const infrastructureApps = [
     image: "/images/planning.jpg",
     description: "Helps in the identification and visualization of disparities in access to essential services, enabling data-driven planning and equitable infrastructure development.",
     keywords: ["accessibility", "mapping", "services", "urban", "regional", "planning", "infrastructure"],
-    url: "https://esrirw.rw/portal/apps/dashboards/e2099add035445e2af630c9dc115ba0b"
+    url: "https://gh.space.gov.rw/portal/apps/dashboards/0a331d36df3f4e30998b23a027454e5d"
   },
   {
     id: 4,

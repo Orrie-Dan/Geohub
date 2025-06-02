@@ -169,16 +169,16 @@ export default function EducationApps() {
             {filteredApps.length > 0 ? (
               <div className={
                 viewMode === 'grid' 
-                  ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                  ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr"
                   : "space-y-4"
               }>
                 {filteredApps.map((app, index) => (
                   <div key={app.id} className="animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
                     {viewMode === 'grid' ? (
-                      // Grid View
-                      <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                      // Grid View - Now with flex layout for equal heights
+                      <div className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col h-full">
                         {/* App Image */}
-                        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-500/20 to-purple-600/20 flex items-center justify-center">
+                        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-500/20 to-purple-600/20 flex items-center justify-center flex-shrink-0">
                           {app.image ? (
                             <img
                               src={app.image}
@@ -206,30 +206,24 @@ export default function EducationApps() {
                           </div>
                         </div>
 
-                        {/* App Content */}
-                        <div className="p-6">
+                        {/* App Content - Flex grow to fill remaining space */}
+                        <div className="p-6 flex flex-col flex-grow">
                           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
                             {app.title}
                           </h3>
                           
-                          <p className="text-slate-300 text-sm mb-4 overflow-hidden line-clamp-3">
+                          <p className="text-slate-300 text-sm mb-4 flex-grow overflow-hidden">
                             {app.description}
                           </p>
 
-                          {/* Action Buttons */}
-                          <div className="flex gap-2">
+                          {/* Action Buttons - Always at bottom */}
+                          <div className="flex gap-2 mt-auto">
                             <button 
                               className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm rounded-lg transition-colors"
                               onClick={() => handleOpenLink(app.link)}
                             >
                               <ExternalLink className="h-4 w-4" />
                               Launch
-                            </button>
-                            <button 
-                              className="px-3 py-2 border border-slate-600 text-slate-300 hover:bg-slate-700 text-sm rounded-lg transition-colors"
-                              onClick={() => handleOpenLink(app.link)}
-                            >
-                              Learn More
                             </button>
                           </div>
                         </div>
@@ -280,7 +274,6 @@ export default function EducationApps() {
                                   <ExternalLink className="h-4 w-4" />
                                   Launch
                                 </button>
-                                
                               </div>
                             </div>
                           </div>
@@ -400,7 +393,7 @@ export default function EducationApps() {
                   <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors">
                     <span className="sr-only">LinkedIn</span>
                     <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5 5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
                 </div>
