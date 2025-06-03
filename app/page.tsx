@@ -12,11 +12,11 @@ import ScrollDownButton from "@/components/ScrollDownButton"
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col relative">
-      {/* Fixed Background - Moon Landing */}
+      {/* Fixed Background */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/2.jpg"
-          alt="Rocket Launch"
+          src="/images/rw2.jpg"
+          alt="Rwandan map"
           fill
           priority
           className="object-cover object-center"
