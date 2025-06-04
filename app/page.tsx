@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         </section>
         {/* About Section */}
-        <section className="relative py-24">
+        <section id="about"  className="relative py-24">
           <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm"></div>
           <div className="container relative z-10 px-4 mx-auto">
             <ScrollReveal>
@@ -72,6 +72,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
           </div>
+          
         </section>
 
         {/* Enhanced Category Section */}
@@ -81,7 +82,7 @@ export default function Home() {
         </section>
 
         {/* Featured Applications */}
-        <section className="relative py-24">
+        <section id="category" className="relative py-24">
           <div className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm"></div>
           <div className="container relative z-10 px-4 mx-auto">
             <ScrollReveal>
@@ -90,7 +91,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               <ScrollReveal delay={100}>
                 <FeaturedApp
                   title="Agriculture Land Profiling and Crops Suitability"
@@ -161,19 +162,17 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#about" className="hover:text-sky-400">
                       About
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="#category" className="hover:text-sky-400">
                       Applications
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
-                      Contact
-                    </Link>
+                   
                   </li>
                 </ul>
               </div>
@@ -181,17 +180,17 @@ export default function Home() {
                 <h3 className="text-white text-lg font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="category/agriculture" className="hover:text-sky-400">
                       Agriculture
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="category/infrastructure" className="hover:text-sky-400">
                       Infrastructure
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="category/health" className="hover:text-sky-400">
                       Health
                     </Link>
                   </li>

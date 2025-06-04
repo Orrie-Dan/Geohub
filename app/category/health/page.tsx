@@ -330,19 +330,41 @@ export default function HealthApps() {
               <div>
                 <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-cyan-400">Home</a></li>
-                  <li><a href="#" className="hover:text-cyan-400">About</a></li>
-                  <li><a href="#" className="hover:text-cyan-400">Applications</a></li>
-                  <li><a href="#" className="hover:text-cyan-400">Contact</a></li>
+                  <li>
+                    <Link href="/#" className="hover:text-sky-400">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#about" className="hover:text-sky-400">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#category" className="hover:text-sky-400">
+                      Applications
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-white text-lg font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-cyan-400">Health</a></li>
-                  <li><a href="#" className="hover:text-cyan-400">Environment</a></li>
-                  <li><a href="#" className="hover:text-cyan-400">Education</a></li>
-                  <li><a href="#" className="hover:text-cyan-400">View All</a></li>
+                  <li>
+                    <Link href="/category/agriculture" className="hover:text-sky-400">
+                      Agriculture
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/category/infrastructure" className="hover:text-sky-400">
+                      Infrastructure
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/category/health" className="hover:text-sky-400">
+                      Health
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>

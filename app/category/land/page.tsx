@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from "react"
 import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, Star, Users, Camera, Map, Navigation } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link" // Add this import
+import Link from "next/link" 
 
 // Tourism application data
 const tourismApps = [
@@ -59,7 +59,7 @@ export default function TourismApps() {
       {/* Fixed Background */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/Earth.jpg"
+          src="/images/rw2.jpg"
           alt="Earth Background"
           fill
           priority
@@ -88,10 +88,10 @@ export default function TourismApps() {
             
             <div className="text-center mb-12 space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-400 tracking-tight drop-shadow-lg">
-                Land  Applications
+                Land Applications
               </h1>
               <p className="text-xl text-slate-200 max-w-3xl mx-auto drop-shadow-sm">
-                Explore our collection of geospatial applications designed to enhance land management and mining operations in Rwanda. From mapping land parcels to managing mining licenses, these tools leverage satellite imagery and GIS technology to support sustainable development.
+                Explore our collection of geospatial applications designed to enhance land management in Rwanda. From mapping land parcels, these tools leverage satellite imagery and GIS technology to support sustainable development.
               </p>
             </div>
 
@@ -101,7 +101,7 @@ export default function TourismApps() {
                 <div className="relative flex-1">
                   <input
                     type="text"
-                    placeholder="Search tourism applications by name..."
+                    placeholder="Search land applications by name..."
                     value={searchQuery}
                     onChange={handleSearchChange}
                     className="w-full pl-12 pr-10 py-4 text-lg bg-white/15 backdrop-blur-md border border-slate-600 rounded-lg text-white placeholder:text-slate-300 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/50 focus:outline-none"
@@ -309,76 +309,94 @@ export default function TourismApps() {
 
         {/* Footer */}
         <footer className="relative bg-slate-950/95 text-slate-400 py-12">
-          <div className="container relative z-10 px-4 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-white text-lg font-semibold mb-4">GeoHub Land</h3>
-                <p className="text-sm">
-                  Explore Rwanda's rich tourism potential through our geospatial applications. From wildlife conservation to cultural heritage, discover how satellite imagery and GIS technology are transforming the tourism sector.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a href="#" className="hover:text-sky-400 transition-colors">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-sky-400 transition-colors">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-sky-400 transition-colors">
-                      Applications
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-sky-400 transition-colors">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                
-                  
-              </div>
-              <div>
-                <h3 className="text-white text-lg font-semibold mb-4">Contact</h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-2" /> Kigali, Rwanda
-                  </li>
-                  <li>
-                    <a href="mailto:tourism@space.gov.rw" className="hover:text-sky-400 transition-colors">
-                      info@space.gov.rw
-                    </a>
-                  </li>
-                </ul>
-                <div className="mt-4 flex space-x-4">
-                  <a href="#" className="text-slate-400 hover:text-sky-400 transition-colors">
-                    <span className="sr-only">Twitter</span>
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-slate-400 hover:text-sky-400 transition-colors">
-                    <span className="sr-only">LinkedIn</span>
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm">
-              <p>© {new Date().getFullYear()} Rwanda Space Agency. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+                  <div className="container relative z-10 px-4 mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                      <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">GeoHub</h3>
+                        <p className="text-sm">
+                          A project of the Rwanda Space Agency providing geospatial applications for national
+                          development.
+                        </p>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul className="space-y-2 text-sm">
+                          <li>
+                            <Link href="/#" className="hover:text-sky-400">
+                              Home
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/#about" className="hover:text-sky-400">
+                              About
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/#category" className="hover:text-sky-400">
+                              Applications
+                            </Link>
+                          </li>
+                          <li>
+                           
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">Categories</h3>
+                        <ul className="space-y-2 text-sm">
+                          <li>
+                            <Link href="/category/agriculture" className="hover:text-sky-400">
+                              Agriculture
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/category/infrastructure" className="hover:text-sky-400">
+                              Infrastructure
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/category/health" className="hover:text-sky-400">
+                              Health
+                            </Link>
+                          </li>
+                          <li>
+                            
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-white text-lg font-semibold mb-4">Contact</h3>
+                        <ul className="space-y-2 text-sm">
+                          <li className="flex items-center">
+                            <MapPin className="h-4 w-4 mr-2" /> Kigali, Rwanda
+                          </li>
+                          <li>
+                            <Link href="mailto:info@space.gov.rw" className="hover:text-sky-400">
+                              info@space.gov.rw
+                            </Link>
+                          </li>
+                        </ul>
+                        <div className="mt-4 flex space-x-4">
+                          <Link href="#" className="text-slate-400 hover:text-sky-400">
+                            <span className="sr-only">Twitter</span>
+                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                          </Link>
+                          <Link href="#" className="text-slate-400 hover:text-sky-400">
+                            <span className="sr-only">LinkedIn</span>
+                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm">
+                      <p>© {new Date().getFullYear()} Rwanda Space Agency. All rights reserved.</p>
+                    </div>
+                  </div>
+                </footer>
       </div>
 
       <style jsx>{`

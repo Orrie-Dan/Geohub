@@ -48,9 +48,7 @@ export default function FeaturedApp({ title, category, image, description, url }
         <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
         <p className="text-slate-300 mb-4">{description}</p>
         <div className="flex justify-between items-center">
-          <Button variant="ghost" className="text-sky-400 hover:text-sky-300 p-0 h-auto">
-            Learn more
-          </Button>
+          
           <Button size="sm" className="bg-sky-600 hover:bg-sky-700" onClick={handleLaunch}>
             <ExternalLink className="h-4 w-4 mr-2" /> Launch
           </Button>

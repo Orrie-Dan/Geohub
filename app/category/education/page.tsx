@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useMemo, useCallback } from "react"
-import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, Star, Users, BookOpen, GraduationCap, Brain, Link } from "lucide-react"
+import { Search, ArrowLeft, ExternalLink, Grid, List, X, MapPin, Star, Users, BookOpen, GraduationCap, Brain } from "lucide-react"
+import Link from "next/link" 
 
 
 // Education application data
@@ -322,53 +323,43 @@ export default function EducationApps() {
                 <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <button 
-                      onClick={handleBackToHome}
-                      className="hover:text-indigo-400 transition-colors text-left"
-                    >
+                    <Link href="/#" className="hover:text-sky-400">
                       Home
-                    </button>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
+                    <Link href="/#about" className="hover:text-sky-400">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
+                    <Link href="/#category" className="hover:text-sky-400">
                       Applications
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
-                      Contact
-                    </a>
+                   
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-white text-lg font-semibold mb-4">Education Categories</h3>
+                <h3 className="text-white text-lg font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
-                      K-12 Education
-                    </a>
+                    <Link href="/category/agriculture" className="hover:text-sky-400">
+                      Agriculture
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
-                      Higher Education
-                    </a>
+                    <Link href="/category/infrastructure" className="hover:text-sky-400">
+                      Infrastructure
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
-                      Vocational Training
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-indigo-400 transition-colors">
-                      View All
-                    </a>
-                  </li>
+                    <Link href="/category/health" className="hover:text-sky-400">
+                      Health
+                    </Link>
+                    </li>
                 </ul>
               </div>
               <div>

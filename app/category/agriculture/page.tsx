@@ -377,24 +377,22 @@ export default function AgriculturalApps() {
                 <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="/#" className="hover:text-sky-400">
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="/#about" className="hover:text-sky-400">
                       About
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="/#category" className="hover:text-sky-400">
                       Applications
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
-                      Contact
-                    </Link>
+                   
                   </li>
                 </ul>
               </div>
@@ -402,23 +400,23 @@ export default function AgriculturalApps() {
                 <h3 className="text-white text-lg font-semibold mb-4">Categories</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="/category/agriculture" className="hover:text-sky-400">
                       Agriculture
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="/category/infrastructure" className="hover:text-sky-400">
                       Infrastructure
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-sky-400">
+                    <Link href="/category/health" className="hover:text-sky-400">
                       Health
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="hover:text-sky-400">
-                      View All
+                      
                     </Link>
                   </li>
                 </ul>

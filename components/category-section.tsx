@@ -38,7 +38,7 @@ const categories = [
   },
   {
     title: "Disaster Management",
-    icon: "alert-triangle",
+    icon: "shield",
     description: "Early warning systems and disaster response planning",
     color: "red",
     applications: 6 ,
@@ -67,11 +67,11 @@ const categories = [
     description: "Land use planning and resource management",
     color: "amber",
     applications: 1,
-    image: "/images/land.jpg",
+    image: "/images/lnd.jpg",
   },
   {
     title: "Mining",
-    icon: "hammer",
+    icon: "hard-hat",
     description: "Mineral resource mapping and mining operations",
     color: "gray",
     applications: 1,
@@ -104,7 +104,7 @@ const categories = [
   },
   {
     title: "Trade",
-    icon: "dollar-sign",
+    icon: "shipping-fast",
     description: "Market analysis and trade routes mapping",
     color: "yellow",
     applications: 1,
